@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8132D34E1CD7068600BBF31B /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132D34D1CD7068600BBF31B /* WeatherService.swift */; };
+		8132D3501CD70C7000BBF31B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132D34F1CD70C7000BBF31B /* Weather.swift */; };
 		81FD54201CD6E42000B7048F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FD541F1CD6E42000B7048F /* AppDelegate.swift */; };
 		81FD54221CD6E42000B7048F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FD54211CD6E42000B7048F /* ViewController.swift */; };
 		81FD54251CD6E42000B7048F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81FD54231CD6E42000B7048F /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8132D34D1CD7068600BBF31B /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		8132D34F1CD70C7000BBF31B /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		81FD541C1CD6E42000B7048F /* EriWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EriWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FD541F1CD6E42000B7048F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81FD54211CD6E42000B7048F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			children = (
 				81FD541F1CD6E42000B7048F /* AppDelegate.swift */,
 				81FD54211CD6E42000B7048F /* ViewController.swift */,
+				8132D34D1CD7068600BBF31B /* WeatherService.swift */,
+				8132D34F1CD70C7000BBF31B /* Weather.swift */,
 				81FD54231CD6E42000B7048F /* Main.storyboard */,
 				81FD54291CD6E42000B7048F /* Assets.xcassets */,
 				81FD542B1CD6E42000B7048F /* LaunchScreen.storyboard */,
@@ -262,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8132D34E1CD7068600BBF31B /* WeatherService.swift in Sources */,
 				81FD54281CD6E42000B7048F /* EriWeather.xcdatamodeld in Sources */,
 				81FD54221CD6E42000B7048F /* ViewController.swift in Sources */,
 				81FD54201CD6E42000B7048F /* AppDelegate.swift in Sources */,
+				8132D3501CD70C7000BBF31B /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +497,7 @@
 				81FD54491CD6E42000B7048F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81FD544A1CD6E42000B7048F /* Build configuration list for PBXNativeTarget "EriWeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +506,7 @@
 				81FD544C1CD6E42000B7048F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81FD544D1CD6E42000B7048F /* Build configuration list for PBXNativeTarget "EriWeatherUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +515,7 @@
 				81FD544F1CD6E42000B7048F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
