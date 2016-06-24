@@ -12,10 +12,24 @@ struct Weather {
     let cityName: String
     let temp: Double
     let desc: String
+    let icon: String
+    let tempMin: Double
+    let tempMax: Double
+    let clouds: Double
     
-    init(cityName: String, temp: Double, desc: String) {
+    init(cityName: String,
+         temp: Double,
+         desc: String,
+         icon: String,
+         tempMin: Double,
+         tempMax: Double,
+         clouds: Double) {
         self.cityName = cityName
         self.temp = temp
         self.desc = desc
+        self.icon = "http://openweathermap.org/img/w/\(icon).png"
+        self.tempMin = tempMin
+        self.tempMax = tempMax
+        self.clouds = clouds
     }
 }

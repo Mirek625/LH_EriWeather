@@ -13,17 +13,28 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     let weatherService = WeatherService()
 
     @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var tempMinLabel: UILabel!
+    @IBOutlet weak var tempMaxLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
-    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cloudsLabel: UILabel!
+    @IBOutlet weak var cityButtonText: UIButton!
+    @IBOutlet weak var weatherImage: UIImageView!
     
     @IBAction func setCityTapped(sender: UIButton) {
         openCityAlert()
     }
     
-    func setWeather(weather:Weather) {
-        self.tempLabel.text = "\(weather.temp)"
+    func setWeather(weather: Weather) {
+        let tempInCelsius = weather.temp - 273.15
+        self.tempLabel.text = "\(tempInCelsius)°"
         self.descLabel.text = weather.desc
-        self.cityLabel.text = weather.cityName
+        self.tempMinLabel.text  = "min: \(weather.tempMin - 273.15)°"
+        self.tempMaxLabel.text  = "max: \(weather.tempMax - 273.15)°"
+        self.cloudsLabel.text = "Clouds: \(weather.clouds)%"
+        self.cityButtonText.setTitle(weather.cityName, forState: UIControlState.Normal)
+        let url = NSURL(string: weather.icon)
+        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+        weatherImage.image = UIImage(data: data!)
     }
     
     func openCityAlert() {
@@ -39,7 +50,6 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         let save = UIAlertAction(title: "Save",
                                  style: UIAlertActionStyle.Default) { (action: UIAlertAction) in
                                     let textField = alert.textFields?[0]
-                                    self.cityLabel.text = textField?.text!
                                     self.weatherService.getWeather((textField?.text!)!)
         }
         
